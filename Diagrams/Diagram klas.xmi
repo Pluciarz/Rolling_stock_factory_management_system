@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_X1ACQAIPEfGHHssEL0Fv5w" name="Diagram klas">
+  <eAnnotations xmi:id="_X1ACQQIPEfGHHssEL0Fv5w" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_X1ACQgIPEfGHHssEL0Fv5w" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_X1ACQwIPEfGHHssEL0Fv5w" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACRAIPEfGHHssEL0Fv5w" name="PojazdKolejowy">
+    <ownedAttribute xmi:id="_X1ACRQIPEfGHHssEL0Fv5w" name="idPojazdu" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACRgIPEfGHHssEL0Fv5w" name="typ" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACRwIPEfGHHssEL0Fv5w" name="pobierzSpecyfikacje" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X1ACSAIPEfGHHssEL0Fv5w" memberEnd="_X1ACSQIPEfGHHssEL0Fv5w _X1ACSgIPEfGHHssEL0Fv5w">
+    <ownedEnd xmi:id="_X1ACSQIPEfGHHssEL0Fv5w" name="zamowienie" visibility="public" type="_X1ACawIPEfGHHssEL0Fv5w" association="_X1ACSAIPEfGHHssEL0Fv5w"/>
+    <ownedEnd xmi:id="_X1ACSgIPEfGHHssEL0Fv5w" name="pojazd" visibility="public" type="_X1ACRAIPEfGHHssEL0Fv5w" association="_X1ACSAIPEfGHHssEL0Fv5w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X1ACSwIPEfGHHssEL0Fv5w" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X1ACTAIPEfGHHssEL0Fv5w"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACTQIPEfGHHssEL0Fv5w" name="Wagon">
+    <generalization xmi:id="_X1ACTgIPEfGHHssEL0Fv5w" general="_X1ACRAIPEfGHHssEL0Fv5w"/>
+    <ownedAttribute xmi:id="_X1ACTwIPEfGHHssEL0Fv5w" name="idWagonu" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACUAIPEfGHHssEL0Fv5w" name="liczbaMiejsc" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACUQIPEfGHHssEL0Fv5w" name="dlugosc" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACUgIPEfGHHssEL0Fv5w" name="szerokosc" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACUwIPEfGHHssEL0Fv5w" name="pobierzInformacjeWagon" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACVAIPEfGHHssEL0Fv5w" name="Lokomotywa">
+    <generalization xmi:id="_X1ACVQIPEfGHHssEL0Fv5w" general="_X1ACRAIPEfGHHssEL0Fv5w"/>
+    <ownedAttribute xmi:id="_X1ACVgIPEfGHHssEL0Fv5w" name="idLokomotywy" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACVwIPEfGHHssEL0Fv5w" name="moc" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACWAIPEfGHHssEL0Fv5w" name="dlugosc" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACWQIPEfGHHssEL0Fv5w" name="szerokosc" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EFloat"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACWgIPEfGHHssEL0Fv5w" name="pobierzInformacjeLokomotywa" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACWwIPEfGHHssEL0Fv5w" name="Część">
+    <ownedAttribute xmi:id="_X1ACXAIPEfGHHssEL0Fv5w" name="numerCzęści" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACXQIPEfGHHssEL0Fv5w" name="nazwa" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACXgIPEfGHHssEL0Fv5w" name="pobierzInformacjeCzesci" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X1ACXwIPEfGHHssEL0Fv5w" memberEnd="_X1ACYAIPEfGHHssEL0Fv5w _X1ACYQIPEfGHHssEL0Fv5w">
+    <ownedEnd xmi:id="_X1ACYAIPEfGHHssEL0Fv5w" name="dostawca" visibility="public" type="_X1ACeAIPEfGHHssEL0Fv5w" association="_X1ACXwIPEfGHHssEL0Fv5w"/>
+    <ownedEnd xmi:id="_X1ACYQIPEfGHHssEL0Fv5w" name="dostarczoneCzesci" visibility="public" type="_X1ACWwIPEfGHHssEL0Fv5w" association="_X1ACXwIPEfGHHssEL0Fv5w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X1ACYgIPEfGHHssEL0Fv5w" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X1ACYwIPEfGHHssEL0Fv5w"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X1ACZAIPEfGHHssEL0Fv5w" memberEnd="_X1ACZQIPEfGHHssEL0Fv5w _X1ACZgIPEfGHHssEL0Fv5w">
+    <ownedEnd xmi:id="_X1ACZQIPEfGHHssEL0Fv5w" name="magazyn" visibility="public" type="_X1ACaQIPEfGHHssEL0Fv5w" association="_X1ACZAIPEfGHHssEL0Fv5w"/>
+    <ownedEnd xmi:id="_X1ACZgIPEfGHHssEL0Fv5w" name="czesci" visibility="public" type="_X1ACWwIPEfGHHssEL0Fv5w" association="_X1ACZAIPEfGHHssEL0Fv5w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X1ACZwIPEfGHHssEL0Fv5w" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X1ACaAIPEfGHHssEL0Fv5w"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACaQIPEfGHHssEL0Fv5w" name="Magazyn">
+    <ownedAttribute xmi:id="_X1ACagIPEfGHHssEL0Fv5w" name="lokalizacja" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACawIPEfGHHssEL0Fv5w" name="Zamowienie">
+    <ownedAttribute xmi:id="_X1ACbAIPEfGHHssEL0Fv5w" name="numerZamowienia" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACbQIPEfGHHssEL0Fv5w" name="status" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACbgIPEfGHHssEL0Fv5w" name="zaktualizujStatus" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X1ACbwIPEfGHHssEL0Fv5w" memberEnd="_X1ACcAIPEfGHHssEL0Fv5w _X1ACcQIPEfGHHssEL0Fv5w">
+    <ownedEnd xmi:id="_X1ACcAIPEfGHHssEL0Fv5w" name="klient" visibility="public" type="_X1ACdAIPEfGHHssEL0Fv5w" association="_X1ACbwIPEfGHHssEL0Fv5w"/>
+    <ownedEnd xmi:id="_X1ACcQIPEfGHHssEL0Fv5w" name="zamowienia" visibility="public" type="_X1ACawIPEfGHHssEL0Fv5w" association="_X1ACbwIPEfGHHssEL0Fv5w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X1ACcgIPEfGHHssEL0Fv5w" value="*"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_X1ACcwIPEfGHHssEL0Fv5w"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACdAIPEfGHHssEL0Fv5w" name="Klient">
+    <ownedAttribute xmi:id="_X1ACdQIPEfGHHssEL0Fv5w" name="nazwa" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACdgIPEfGHHssEL0Fv5w" name="NIP" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACdwIPEfGHHssEL0Fv5w" name="dokonajZamowienia" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACeAIPEfGHHssEL0Fv5w" name="Dostawca">
+    <ownedAttribute xmi:id="_X1ACeQIPEfGHHssEL0Fv5w" name="nazwa" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACegIPEfGHHssEL0Fv5w" name="potwierdzDostawe" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACewIPEfGHHssEL0Fv5w" name="ProcesProdukcji">
+    <ownedAttribute xmi:id="_X1ACfAIPEfGHHssEL0Fv5w" name="idProcesu" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACfQIPEfGHHssEL0Fv5w" name="rozpocznijProces" visibility="public"/>
+    <ownedOperation xmi:id="_X1ACfgIPEfGHHssEL0Fv5w" name="zaktualizujEtap" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_X1ACfwIPEfGHHssEL0Fv5w" memberEnd="_X1ACgAIPEfGHHssEL0Fv5w _X1ACggIPEfGHHssEL0Fv5w">
+    <ownedEnd xmi:id="_X1ACgAIPEfGHHssEL0Fv5w" name="etapy" visibility="public" type="_X1ACgwIPEfGHHssEL0Fv5w" association="_X1ACfwIPEfGHHssEL0Fv5w">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_X1ACgQIPEfGHHssEL0Fv5w" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_X1ACggIPEfGHHssEL0Fv5w" name="proces" visibility="public" type="_X1ACewIPEfGHHssEL0Fv5w" association="_X1ACfwIPEfGHHssEL0Fv5w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACgwIPEfGHHssEL0Fv5w" name="EtapProdukcji">
+    <ownedAttribute xmi:id="_X1AChAIPEfGHHssEL0Fv5w" name="nazwaEtapu" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1AChQIPEfGHHssEL0Fv5w" name="kolejnosc" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1AChgIPEfGHHssEL0Fv5w" name="pobierzInformacjeEtap" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1AChwIPEfGHHssEL0Fv5w" name="Test">
+    <ownedAttribute xmi:id="_X1ACiAIPEfGHHssEL0Fv5w" name="typTestu" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACiQIPEfGHHssEL0Fv5w" name="uruchomTest" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACigIPEfGHHssEL0Fv5w" name="KontrolaJakosci">
+    <ownedAttribute xmi:id="_X1ACiwIPEfGHHssEL0Fv5w" name="certyfikat" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACjAIPEfGHHssEL0Fv5w" name="dokonajKontroli" visibility="public"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_X1ACjQIPEfGHHssEL0Fv5w" name="Pracownik">
+    <ownedAttribute xmi:id="_X1ACjgIPEfGHHssEL0Fv5w" name="pracownikId" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACjwIPEfGHHssEL0Fv5w" name="imie" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACkAIPEfGHHssEL0Fv5w" name="nazwisko" visibility="public" isUnique="false">
+      <ownedComment xmi:id="_X1ACkQIPEfGHHssEL0Fv5w">
+        <body>&lt;Enter note text here></body>
+      </ownedComment>
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_X1ACkgIPEfGHHssEL0Fv5w" name="stanowisko" visibility="public" isUnique="false">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_X1ACkwIPEfGHHssEL0Fv5w" name="przydzielZadanie" visibility="public"/>
+  </packagedElement>
+</uml:Model>

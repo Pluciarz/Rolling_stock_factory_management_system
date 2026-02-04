@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_ZjngMAIPEfGHHssEL0Fv5w" name="Diagram stanów">
+  <eAnnotations xmi:id="_ZjngMQIPEfGHHssEL0Fv5w" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_ZjngMgIPEfGHHssEL0Fv5w" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_ZjngMwIPEfGHHssEL0Fv5w" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_ZjngNAIPEfGHHssEL0Fv5w" name="Diagram stanów">
+    <region xmi:id="_ZjngNQIPEfGHHssEL0Fv5w" name="mainRegion">
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_ZjngNgIPEfGHHssEL0Fv5w" name="start"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngNwIPEfGHHssEL0Fv5w" name="Projektowanie"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngOAIPEfGHHssEL0Fv5w" name="AkceptacjaProjektu"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngOQIPEfGHHssEL0Fv5w" name="PlanowanieProdukcji"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngOgIPEfGHHssEL0Fv5w" name="ProdukcjaRamy"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngOwIPEfGHHssEL0Fv5w" name="InstalacjaPodzespolow"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngPAIPEfGHHssEL0Fv5w" name="TestyFunkcjonalne"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngPQIPEfGHHssEL0Fv5w" name="KontrolaJakosci"/>
+      <subvertex xmi:type="uml:State" xmi:id="_ZjngPgIPEfGHHssEL0Fv5w" name="OdbiorKlienta"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_ZjngPwIPEfGHHssEL0Fv5w" name="Gotowy"/>
+      <transition xmi:id="_ZjngQAIPEfGHHssEL0Fv5w" source="_ZjngNgIPEfGHHssEL0Fv5w" target="_ZjngNwIPEfGHHssEL0Fv5w"/>
+      <transition xmi:id="_ZjngQQIPEfGHHssEL0Fv5w" source="_ZjngNwIPEfGHHssEL0Fv5w" target="_ZjngOAIPEfGHHssEL0Fv5w"/>
+      <transition xmi:id="_ZjngQgIPEfGHHssEL0Fv5w" source="_ZjngOAIPEfGHHssEL0Fv5w" target="_ZjngOQIPEfGHHssEL0Fv5w" guard="_ZjngQwIPEfGHHssEL0Fv5w">
+        <ownedRule xmi:id="_ZjngQwIPEfGHHssEL0Fv5w" name="approved == true" constrainedElement="_ZjngQgIPEfGHHssEL0Fv5w">
+          <specification xmi:type="uml:LiteralString" xmi:id="_ZjngRAIPEfGHHssEL0Fv5w" value="approved == true"/>
+        </ownedRule>
+      </transition>
+      <transition xmi:id="_ZjngRQIPEfGHHssEL0Fv5w" name="Transition" source="_ZjngOAIPEfGHHssEL0Fv5w" target="_ZjngNwIPEfGHHssEL0Fv5w" guard="_ZjngRgIPEfGHHssEL0Fv5w">
+        <ownedRule xmi:id="_ZjngRgIPEfGHHssEL0Fv5w" name="approved == false" constrainedElement="_ZjngRQIPEfGHHssEL0Fv5w">
+          <specification xmi:type="uml:LiteralString" xmi:id="_ZjngRwIPEfGHHssEL0Fv5w" value="approved == false"/>
+        </ownedRule>
+      </transition>
+      <transition xmi:id="_ZjngSAIPEfGHHssEL0Fv5w" source="_ZjngOQIPEfGHHssEL0Fv5w" target="_ZjngOgIPEfGHHssEL0Fv5w"/>
+      <transition xmi:id="_ZjngSQIPEfGHHssEL0Fv5w" source="_ZjngOgIPEfGHHssEL0Fv5w" target="_ZjngOwIPEfGHHssEL0Fv5w" guard="_ZjngSgIPEfGHHssEL0Fv5w">
+        <ownedRule xmi:id="_ZjngSgIPEfGHHssEL0Fv5w" name="frameReady == true" constrainedElement="_ZjngSQIPEfGHHssEL0Fv5w">
+          <specification xmi:type="uml:LiteralString" xmi:id="_ZjngSwIPEfGHHssEL0Fv5w" value="frameReady == true"/>
+        </ownedRule>
+      </transition>
+      <transition xmi:id="_ZjngTAIPEfGHHssEL0Fv5w" source="_ZjngOwIPEfGHHssEL0Fv5w" target="_ZjngPAIPEfGHHssEL0Fv5w"/>
+      <transition xmi:id="_ZjngTQIPEfGHHssEL0Fv5w" source="_ZjngPAIPEfGHHssEL0Fv5w" target="_ZjngPQIPEfGHHssEL0Fv5w" guard="_ZjngTgIPEfGHHssEL0Fv5w">
+        <ownedRule xmi:id="_ZjngTgIPEfGHHssEL0Fv5w" name="passThreshold == true" constrainedElement="_ZjngTQIPEfGHHssEL0Fv5w">
+          <specification xmi:type="uml:LiteralString" xmi:id="_ZjngTwIPEfGHHssEL0Fv5w" value="passThreshold == true"/>
+        </ownedRule>
+      </transition>
+      <transition xmi:id="_ZjngUAIPEfGHHssEL0Fv5w" name="Transition" source="_ZjngPAIPEfGHHssEL0Fv5w" target="_ZjngNwIPEfGHHssEL0Fv5w" guard="_ZjngUQIPEfGHHssEL0Fv5w">
+        <ownedRule xmi:id="_ZjngUQIPEfGHHssEL0Fv5w" name="passThreshold == false" constrainedElement="_ZjngUAIPEfGHHssEL0Fv5w">
+          <specification xmi:type="uml:LiteralString" xmi:id="_ZjngUgIPEfGHHssEL0Fv5w" value="passThreshold == false"/>
+        </ownedRule>
+      </transition>
+      <transition xmi:id="_ZjngUwIPEfGHHssEL0Fv5w" source="_ZjngPQIPEfGHHssEL0Fv5w" target="_ZjngPgIPEfGHHssEL0Fv5w" guard="_ZjngVAIPEfGHHssEL0Fv5w">
+        <ownedRule xmi:id="_ZjngVAIPEfGHHssEL0Fv5w" name="passedControl == true" constrainedElement="_ZjngUwIPEfGHHssEL0Fv5w">
+          <specification xmi:type="uml:LiteralString" xmi:id="_ZjngVQIPEfGHHssEL0Fv5w" value="passedControl == true"/>
+        </ownedRule>
+      </transition>
+      <transition xmi:id="_ZjngVgIPEfGHHssEL0Fv5w" name="Transition" source="_ZjngPQIPEfGHHssEL0Fv5w" target="_ZjngNwIPEfGHHssEL0Fv5w" guard="_ZjngVwIPEfGHHssEL0Fv5w">
+        <ownedRule xmi:id="_ZjngVwIPEfGHHssEL0Fv5w" name="passedControl == false" constrainedElement="_ZjngVgIPEfGHHssEL0Fv5w">
+          <specification xmi:type="uml:LiteralString" xmi:id="_ZjngWAIPEfGHHssEL0Fv5w" value="passedControl == false"/>
+        </ownedRule>
+      </transition>
+      <transition xmi:id="_ZjngWQIPEfGHHssEL0Fv5w" source="_ZjngPgIPEfGHHssEL0Fv5w" target="_ZjngPwIPEfGHHssEL0Fv5w"/>
+    </region>
+  </packagedElement>
+</uml:Model>
